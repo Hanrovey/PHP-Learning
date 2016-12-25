@@ -1,0 +1,9 @@
+.styly1{
+	/*宽度、高度*/
+	width: 300px;
+	height: 300px;/* 一定要写分号 */
+	border:1px red;
+	background-color: green;
+	padding-top: 30px;
+	padding-left: 30px;
+}
