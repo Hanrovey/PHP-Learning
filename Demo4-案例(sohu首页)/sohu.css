@@ -1,0 +1,119 @@
+/* ------内容体------ */
+body{
+	width: 900px;
+	height: 800px;
+	margin: 0 auto;
+	font-size: 12px;
+	/*border:1px solid green;*/
+}
+
+/* ------顶部------ */
+.top{
+	width: 900px;
+	height: 24px;
+	float: left;
+	margin-top: 5px;
+	/*background: silver;*/
+}
+
+/* 登录 */
+.login{
+	width: 350px;
+	height: 22px;
+	background: pink;
+	float: left;
+
+}
+
+/* 设置首页面 */
+.setindex{
+	width: 85px;
+	height: 22px;
+	/*background: red;*/
+	float: left;
+	margin-left: 100px;
+}
+
+/* 超链接 */
+.myhref{
+	float: right;
+	/*background: blue;*/
+	margin-right: 10px;
+	margin-top: 5px;
+}
+
+/* -----logo 部分-------*/
+.logo{
+	width: 125px;
+	height: 56px;
+	background: silver;
+	float: left;
+	margin-top: 3px;
+}
+
+/* -----导航 部分-------*/
+.navi{
+	width: 770px;
+	height: 56px;
+	background: green;
+	float: right;
+	margin-left: 5px;
+	margin-top: 3px;
+}
+
+/* -----总体广告 部分-------*/
+.adall{
+	width: 900px;
+	height: 211px;
+	margin-top: 5px;
+	float: left;
+	border-style:solid;
+	border-width:1px;
+}
+
+/* 教育 */ 
+.adedu{
+	width: 120px;
+	height: 201px;
+	background: green;
+	margin: 5px 0 5px 5px;
+	float: left;
+}
+
+/* 运动 */
+.adsport{
+	width: 400px;
+	height: 201px;
+	background: green;
+	margin: 5px 0 5px 5px;
+	float: left;
+
+}
+
+/* 房地产 */
+.adhouse{
+	width: 210px;
+	height: 201px;
+	background: green;
+	margin: 5px 0 5px 5px;
+	float: left;
+
+}
+
+/* 动漫 */
+.adcartoon{
+	width: 150px;
+	height: 201px;
+	text-align: center;
+	padding-top: 10px;
+	float: right;
+	border-left:1px solid #000;
+}
+
+
+
+
+
+
+
+
