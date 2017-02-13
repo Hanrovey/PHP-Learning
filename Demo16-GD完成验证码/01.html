@@ -1,0 +1,18 @@
+</!DOCTYPE html>
+<html>
+<head>
+	<title>验证码</title>
+
+<script type="text/javascript">
+function chu(){
+var vcode= document.getElementsByTagName('img')[0];
+vcode.src = '01.php?_s'+Math.random();
+}
+</script>
+	
+
+</head>
+<body>
+	验证码:<input type="text" name="vcode" /><img src="01.php" onclick="chu();" />
+</body>
+</html>
