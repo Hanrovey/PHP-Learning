@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>ueditor demo</title>
+    <title>编辑器配置</title>
 </head>
 
 <body>
@@ -17,10 +17,18 @@
         3。如何与自己的系统整合
     </pre>
 
+    <form action='03.php' method="post">
+
     <!-- 加载编辑器的容器 -->
-    <script id="container" name="content" type="text/plain">
-        这里写你的初始化内容
-    </script>
+    <script id="container" name="content" type="text/plain">这里写你的初始化内容</script>
+    <br />
+
+    <input type="submit" value="提交"/>
+    <input type="button" value="获取编辑器内容(ajax)" onclick="test1();"/>
+    <input type="button" value="获取编辑器内容(纯文本)" onclick="test2();"/>
+    </form>
+
+
     <!-- 配置文件 -->
     <script type="text/javascript" src="./utf8-php/ueditor.config.js"></script>
     <!-- 编辑器源码文件 -->
@@ -29,9 +37,19 @@
     <script type="text/javascript">
     
         var ue = UE.getEditor('container',{
+            toolbars: [['fullscreen', 'source', 'undo', 'redo', 'bold']],// 工具栏
             initialFrameWidth : 500,// 编辑器宽度
             initialFrameHeight : 200// 编辑器高度
         });
+
+
+        function test1(){
+            alert(ue.getContent());
+        }
+
+        function test2(){
+            alert(ue.getPlainTxt());
+        }
 
     </script>
 </body>
