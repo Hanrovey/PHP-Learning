@@ -1,0 +1,50 @@
+<html>
+<head>
+<title>ajax学习</title>
+
+<script>
+
+function createXHR(){
+	var xhr = null;
+	if (window.XMLHttpRequest) {
+		xhr = new XMLHttpRequest();
+	}else if (window.ActiveXObject) {
+		xhr = new ActiveXObject('Microsoft.XMLHTTP');
+	}
+
+	return xhr;
+}
+
+
+function vote(){
+
+	// 创建xhr
+	var xhr = createXHR();
+
+	// 打开连接
+	xhr.open('GET','./02-vote.php',false);
+
+	// 发送请求
+	xhr.send(null);
+
+	// 弹窗测试
+	alert(xhr.responseText);
+}
+
+</script>
+
+
+<style type="text/css"></style>
+</head>
+
+
+<body>
+	<div>
+	<p><img src = "01.jpeg" /></p>
+	<p><input type="button" value="投票方法" onclick="vote();"/></p>
+	</div>
+
+	<div id="progress"></div>
+</body>
+
+</html>
