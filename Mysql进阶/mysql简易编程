@@ -1,0 +1,23 @@
+
+需求；当下单的商品个数 > 库存商品总数时。
+通过触发器默认更改下单个数为最大库存数。
+
+触发器(update - before)
+create trigger modifyTrigger
+before
+insert
+on orders
+
+for each row
+begin
+
+declare rnum int;
+
+select num into rnum from goods where gid=new.gid;
+
+if new.much > rnum then
+	set new.much = rnum;
+end if;
+
+update goods set num = num - new.much where gid = new.gid;
+end$
