@@ -1,0 +1,10 @@
+
+
+触发器(update)
+create trigger updateTrigger
+before
+update
+on orders
+begin
+update goods num=num+old.num-new.num where gid=old.gid;
+end$
