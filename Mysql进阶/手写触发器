@@ -1,0 +1,64 @@
+
+需求
+商品表：goods
+订单表：orders
+当下1个订单时，商品表数据要相应变化
+
+
+创建库
+create database testDB
+
+创建商品表
+create table goods(
+gid int,
+name varchar(20),
+num smallint
+);
+
+创建订单表
+create table orders(
+oid int,
+gid int,
+much smallint
+);
+
+
+修改语句结束符
+delimiter $
+
+查看触发器
+show triggers
+
+移除触发器
+drop trigger name
+
+商品表插入数据
+insert into goods values (1,"cat",60)
+insert into goods values (2,"dog",100) 
+insert into goods values (3,"pig",30)
+
+订单表插入数据
+insert into orders values (100,1,5)
+
+
+创建触发器(插入)
+create trigger insertTrigger
+after
+insert
+on orders
+for each row
+begin
+update goods set num=num-new.much where gid=new.gid;
+end$
+
+
+创建触发器(删除)
+create trigger deleteTrigger
+after
+delete
+on orders
+for each row
+begin
+update goods set num=num+old.much where gid=old.gid;
+end$
+
