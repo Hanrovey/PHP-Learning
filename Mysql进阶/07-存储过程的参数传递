@@ -1,0 +1,16 @@
+
+存储过程的 参数传递
+create procedure p6(w int,h int)
+begin
+
+	select concat('你的面积是',w * h);
+
+	if w > h then
+		select '你挺胖的';
+	elseif h > w then
+		select '你挺瘦的';
+	else
+		select '你挺方的';
+	end if;
+
+end$
