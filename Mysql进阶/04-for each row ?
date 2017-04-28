@@ -1,0 +1,20 @@
+
+
+临时触发器
+create trigger temTrigger
+after
+update
+on orders
+for each row #每一行受影响，触发器都执行，因此成为行级触发器
+begin
+insert into tem values(222);
+end$
+
+
+注意：
+for each row是行级触发器
+
+
+在oracle中
+for each row 如果不写，
+无论update影响多少行，默认只执行一次

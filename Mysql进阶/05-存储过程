@@ -1,0 +1,13 @@
+
+存储过程创建语法
+create procedure name()
+begin
+select 2+3 from goods
+end$
+
+
+查看已有的存储过程
+show procedure status
+
+调用存储过程
+call procedure()$
