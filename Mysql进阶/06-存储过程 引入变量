@@ -1,0 +1,29 @@
+存储过程 引入变量
+create procedure p1()
+begin
+	declare age int default 18;
+	declare weight int default 60;
+	select concat('年龄',age,'体重',weight) from dual;
+end$
+
+
+存储过程 变量运算
+create procedure p2()
+begin
+	declare age int default 20;
+	select age from dual;
+	set age := age + 30;
+	select concat('30年后年龄',age,'岁') from dual;
+end$
+
+
+存储过程 条件控制
+create procedure p3()
+begin
+	declare age int default 18;
+	if age >= 18 then
+		select '成年人' from dual;
+	else
+		select '未成年人' from dual;
+	end if;
+end$
