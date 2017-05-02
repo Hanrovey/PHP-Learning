@@ -1,0 +1,9 @@
+mysql新增一个用户
+grant [权限1，权限2..] on *.* to user@'host' identified by 'password'
+
+常用权限有 all,create,drop,insert,delete,update,select
+
+grant all on *.* to xiaoming@'192.168.10.%' identified by '111111';// ip后面的%是包含一个通配网段
+
+--收回权限
+revoke all on *.* from xiaoming@'192.168.10.%';
