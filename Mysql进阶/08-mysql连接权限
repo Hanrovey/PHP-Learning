@@ -1,0 +1,18 @@
+问题：服务器如何判断用户有没权限连接上来？
+
+依据3个参数：
+主机 ：host
+用户 ： user
+密码 ：password
+
+
+用户的这3个信息，存储在mysql.user表中
+
+
+--修改host域，用ip可以连接
+update user set host='192.168.10.120' where user='root';
+flush privileges;// 刷新权限
+
+修改用户密码
+update user set password=password('111111') where xxx;
+flush privileges;
