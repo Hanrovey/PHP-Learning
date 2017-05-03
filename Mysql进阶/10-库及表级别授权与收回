@@ -1,0 +1,20 @@
+--针对某个库做授权
+grant all on testDB.* to lisi@'192.168.10.%';
+revoke all on testDB.* to lisi@'192.168.10.%';
+
+
+--针对表做授权
+grant insert,update,select on testDB.goodsTable to lisi@'192.168.10.%';// 李四用户只要增，改，查，但不能删数据
+
+
+###查看权限
+--查看全局用户表中某用户权限
+select * from user where user='lisi' \G;
+
+--查看库级别中某用户权限
+select * from db \G;
+
+--查看表级别中某用户权限
+select * from tables_priv \G;
+
+
